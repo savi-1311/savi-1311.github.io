@@ -520,6 +520,10 @@ button {
   margin-bottom: var(--mb-1);
 }
 
+.company-name{
+  color: var(--text-color-light);
+}
+
 .qualification_calendar {
   font-size: var(--smaller-font-size);
   color: var(--text-color-light);
