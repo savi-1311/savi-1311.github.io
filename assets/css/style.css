@@ -402,6 +402,18 @@ button {
   row-gap: 0;
 }
 
+.medium-widget-article__title{
+  color: var(--title-color) !important;
+}
+
+.medium-widget-article__description{
+  color: var(--text-color) !important;
+}
+
+.medium-widget-article__date{
+  color: var(--text-color) !important;
+}
+
 .skills_header {
   display: flex;
   align-items: center;

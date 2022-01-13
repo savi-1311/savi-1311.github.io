@@ -13,7 +13,6 @@
   <link rel="stylesheet" href="./assets/css/style.css" />
   <title>Shambhavi Shandilya</title>
   <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon" />
-  <script src="https://kit.fontawesome.com/4bf48f78b4.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -51,6 +50,11 @@
           <li class="nav_item">
             <a href="#projects" class="nav_link">
               <i class="uil uil-scenery nav_icon"></i> Projects
+            </a>
+          </li>
+          <li class="nav_item">
+            <a href="#blogs" class="nav_link">
+              <i class="uil uil-medium-m nav_icon"></i> Blogs
             </a>
           </li>
           <li class="nav_item">
@@ -681,6 +685,21 @@
       </div>
     </section>
 
+    <!-- Blogs -->
+
+    <section class="portfolio section" id="blogs">
+      <h2 class="section_title">Blogs</h2>
+      <span class="section_subtitle">Most recent articles</span>
+      <div class="portfolio_container container portfolio_content grid swiper-slide">
+        <a href="https://app.daily.dev/savi1311"><img src="https://api.daily.dev/devcards/4338b28c2a9142048af430a2066cdf05.png?r=eg9" width="400" alt="Shambhavi Shandilya's Dev Card"/></a>
+        <div class="portfolio_data">
+          <div id="medium-widget" class="portfolio_container container"></div>
+          <script src="https://medium-widget.pixelpoint.io/widget.js"></script>
+          <script>MediumWidget.Init({renderTo: '#medium-widget', params: {"resource":"https://medium.com/@shambhavishandilya","postsPerLine":1,"limit":5,"picture":"none","fields":["description","publishAt"],"ratio":"original"}})</script>
+        </div>
+      </div>
+    </section>
+
     <!-- Contact Me -->
     <section class="contact section" id="contact">
       <h1 class="section_title">Contact Me</h1>
@@ -770,6 +789,9 @@
           </li>
           <li>
             <a href="#projects" class="footer_link">Projects</a>
+          </li>
+          <li>
+            <a href="#blogs" class="footer_link">Blogs</a>
           </li>
           <li>
             <a href="#contact" class="footer_link">Contact Me</a>
