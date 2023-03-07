@@ -1,6 +1,19 @@
 // Formspree code
 const form = document.getElementById("contact-form");
 
+const rgbToHex = (r, g, b) => '#' + [r, g, b].map(x => {
+  const hex = x.toString(16)
+  return hex.length === 1 ? '0' + hex : hex
+}).join('')
+
+const splitRGB = (rgb) => {
+  let colorArr = rgb.slice(
+    rgb.indexOf("(") + 1,
+    rgb.indexOf(")")
+  ).split(", ");
+  return colorArr;
+}
+
 async function handleSubmit(event) {
   event.preventDefault();
   var status = document.getElementById("alert");
@@ -84,19 +97,31 @@ workheader.style.color = "var(--first-colour)";
 educationheader.addEventListener("click", () => {
   let condition1 = work.classList.contains("qualification-inactive");
   if (!condition1) {
+    var titleColor = window.getComputedStyle(workheader).getPropertyValue("color");
+    var titleColorRGB = splitRGB(titleColor);
+    var titleColorHex = rgbToHex(parseInt(titleColorRGB[0]), parseInt(titleColorRGB[1]), parseInt(titleColorRGB[2]));
+    var textColor = window.getComputedStyle(educationheader).getPropertyValue("color");
+    var textColorRGB = splitRGB(textColor);
+    var textColorHex = rgbToHex(parseInt(textColorRGB[0]), parseInt(textColorRGB[1]), parseInt(textColorRGB[2]));
     education.classList.remove("qualification-inactive");
     work.classList.add("qualification-inactive");
-    workheader.style.color = "var(--text-colour)";
-    educationheader.style.color = "var(--first-colour)";
+    workheader.style.color = textColorHex;
+    educationheader.style.color = titleColorHex;
   }
 });
 workheader.addEventListener("click", () => {
   let condition2 = education.classList.contains("qualification-inactive");
   if (!condition2) {
+    var titleColor = window.getComputedStyle(educationheader).getPropertyValue("color");
+    var titleColorRGB = splitRGB(titleColor);
+    var titleColorHex = rgbToHex(parseInt(titleColorRGB[0]), parseInt(titleColorRGB[1]), parseInt(titleColorRGB[2]));
+    var textColor = window.getComputedStyle(workheader).getPropertyValue("color");
+    var textColorRGB = splitRGB(textColor);
+    var textColorHex = rgbToHex(parseInt(textColorRGB[0]), parseInt(textColorRGB[1]), parseInt(textColorRGB[2]));
     work.classList.remove("qualification-inactive");
     education.classList.add("qualification-inactive");
-    educationheader.style.color = "var(--text-colour)";
-    workheader.style.color = "var(--first-colour)";
+    workheader.style.color = titleColorHex;
+    educationheader.style.color = textColorHex;
   }
 });
 
