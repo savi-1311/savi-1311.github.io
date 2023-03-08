@@ -217,29 +217,60 @@ themeButton.addEventListener("click", () => {
 });
 
 const redHueButton = document.getElementById("hue-button-red");
+const purpleHueButton = document.getElementById("hue-button-purple");
+const greenHueButton = document.getElementById("hue-button-green");
+const blueHueButton = document.getElementById("hue-button-black");
 
 redHueButton.addEventListener("click", () => {
   let root = document.documentElement;
   root.style.setProperty('--hue-color', 0);
+  redHueButton.classList.add('uil-check-circle');
+  redHueButton.classList.remove('uil-circle');
+  purpleHueButton.classList.remove('uil-check-circle');
+  purpleHueButton.classList.add('uil-circle');
+  greenHueButton.classList.remove('uil-check-circle');
+  greenHueButton.classList.add('uil-circle');
+  blueHueButton.classList.remove('uil-check-circle');
+  blueHueButton.classList.add('uil-circle');
 });
 
-const purpleHueButton = document.getElementById("hue-button-purple");
 
 purpleHueButton.addEventListener("click", () => {
   let root = document.documentElement;
   root.style.setProperty('--hue-color', 250);
+  purpleHueButton.classList.add('uil-check-circle');
+  purpleHueButton.classList.remove('uil-circle');
+  redHueButton.classList.remove('uil-check-circle');
+  redHueButton.classList.add('uil-circle');
+  greenHueButton.classList.remove('uil-check-circle');
+  greenHueButton.classList.add('uil-circle');
+  blueHueButton.classList.remove('uil-check-circle');
+  blueHueButton.classList.add('uil-circle');
 });
 
-const greenHueButton = document.getElementById("hue-button-green");
 
 greenHueButton.addEventListener("click", () => {
   let root = document.documentElement;
   root.style.setProperty('--hue-color', 100);
+  greenHueButton.classList.add('uil-check-circle');
+  greenHueButton.classList.remove('uil-circle');
+  purpleHueButton.classList.remove('uil-check-circle');
+  purpleHueButton.classList.add('uil-circle');
+  redHueButton.classList.remove('uil-check-circle');
+  redHueButton.classList.add('uil-circle');
+  blueHueButton.classList.remove('uil-check-circle');
+  blueHueButton.classList.add('uil-circle');
 });
-
-const blueHueButton = document.getElementById("hue-button-black");
 
 blueHueButton.addEventListener("click", () => {
   let root = document.documentElement;
   root.style.setProperty('--hue-color', 200);
+  blueHueButton.classList.add('uil-check-circle');
+  blueHueButton.classList.remove('uil-circle');
+  purpleHueButton.classList.remove('uil-check-circle');
+  purpleHueButton.classList.add('uil-circle');
+  greenHueButton.classList.remove('uil-check-circle');
+  greenHueButton.classList.add('uil-circle');
+  redHueButton.classList.remove('uil-check-circle');
+  redHueButton.classList.add('uil-circle');
 });
