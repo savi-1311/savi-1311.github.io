@@ -611,10 +611,10 @@ button {
   width: fit-content;
   justify-content: center;
   align-items: center;
-  background-color: var(--first-color);
+  border: 2px solid var(--first-color);
   border-radius: 5px;
   font-size: var(--small-font-size);
-  color: #fff;
+  color: var(--title-color);
 }
 
 .portfolio-grid {
