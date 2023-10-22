@@ -91,13 +91,10 @@ skillHeaderArr.forEach((element, idx) => {
 let education = document.getElementById("education");
 let work = document.getElementById("work");
 let educationheader = document.getElementById("educationheader");
-let workheader = document.getElementById("workheader");
-workheader.style.color = "var(--first-colour)";
 
 educationheader.addEventListener("click", () => {
   let condition1 = work.classList.contains("qualification-inactive");
   if (!condition1) {
-    var titleColor = window.getComputedStyle(workheader).getPropertyValue("color");
     var titleColorRGB = splitRGB(titleColor);
     var titleColorHex = rgbToHex(parseInt(titleColorRGB[0]), parseInt(titleColorRGB[1]), parseInt(titleColorRGB[2]));
     var textColor = window.getComputedStyle(educationheader).getPropertyValue("color");
@@ -105,23 +102,7 @@ educationheader.addEventListener("click", () => {
     var textColorHex = rgbToHex(parseInt(textColorRGB[0]), parseInt(textColorRGB[1]), parseInt(textColorRGB[2]));
     education.classList.remove("qualification-inactive");
     work.classList.add("qualification-inactive");
-    workheader.style.color = textColorHex;
     educationheader.style.color = titleColorHex;
-  }
-});
-workheader.addEventListener("click", () => {
-  let condition2 = education.classList.contains("qualification-inactive");
-  if (!condition2) {
-    var titleColor = window.getComputedStyle(educationheader).getPropertyValue("color");
-    var titleColorRGB = splitRGB(titleColor);
-    var titleColorHex = rgbToHex(parseInt(titleColorRGB[0]), parseInt(titleColorRGB[1]), parseInt(titleColorRGB[2]));
-    var textColor = window.getComputedStyle(workheader).getPropertyValue("color");
-    var textColorRGB = splitRGB(textColor);
-    var textColorHex = rgbToHex(parseInt(textColorRGB[0]), parseInt(textColorRGB[1]), parseInt(textColorRGB[2]));
-    work.classList.remove("qualification-inactive");
-    education.classList.add("qualification-inactive");
-    workheader.style.color = titleColorHex;
-    educationheader.style.color = textColorHex;
   }
 });
 
@@ -251,7 +232,7 @@ purpleHueButton.addEventListener("click", () => {
 
 greenHueButton.addEventListener("click", () => {
   let root = document.documentElement;
-  root.style.setProperty('--hue-color', 100);
+  root.style.setProperty('--hue-color', 160);
   greenHueButton.classList.add('uil-check-circle');
   greenHueButton.classList.remove('uil-circle');
   purpleHueButton.classList.remove('uil-check-circle');

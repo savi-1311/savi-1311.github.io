@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap');
 
 :root {
   --header-height: 3rem;
@@ -17,7 +19,7 @@
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 
-  --body-font: "Poppins", sans-serif;
+  --body-font: "Noto Sans", sans-serif;
 
   /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px */
   --big-font-size: 2rem;
@@ -154,7 +156,7 @@ button {
 
 /* LAYOUT  */
 .container {
-  max-width: 768px;
+  max-width: 900px;
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
 }
@@ -375,7 +377,7 @@ button {
 
 /* ABOUT */
 .about_img {
-  width: 200px;
+  width: 300px;
   border-radius: 0.5rem;
   justify-self: center;
   align-self: center;
@@ -565,23 +567,76 @@ button {
   display: none;
 }
 
+/* WORK */
+.work_container {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--container-color);
+  padding: 10px 20px;
+  margin: 30px 0;
+  border-radius: 10px;
+}
+
+.work_title {
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.work_data {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  justify-content: space-around;
+}
+
+.work_item {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 /* PORTFOLIO  */
 .portfolio_container {
   overflow: initial;
 }
 
+.tech-bubbles {
+  display: inline-block;
+  padding: 5px 8px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--first-color);
+  border-radius: 5px;
+  font-size: var(--small-font-size);
+  color: #fff;
+}
+
+.portfolio-grid {
+  display: block;
+  align-items: center;
+}
+
 .portfolio_content {
+  align-items: center;
   padding: 0 2.5rem;
+  column-gap: 5rem;
 }
 
 .portfolio_img {
-  width: 300px;
+  width: 800px;
   object-fit: cover;
-  border-radius: 0.5rem;
+  border-radius: 25px;
   justify-self: center;
 }
 
 .portfolio_title {
+  padding: 15px 0;
   font-size: var(--h3-font-size);
   margin-bottom: var(--mb-0-5);
 }
@@ -818,6 +873,19 @@ button {
 
   .portfolio-img {
     width: 200px;
+  }
+
+  .work_container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .work_title {
+    width: 90%;
+  }
+
+  .work_data {
+    width: 90%;
   }
 }
 
