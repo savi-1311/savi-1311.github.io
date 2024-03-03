@@ -43,7 +43,6 @@ a {
 }
 .medium-blogpost-single-article {
   padding: 10px;
-  color: black;
   border-bottom: 1px solid rgba(131, 131, 131, 0.2);
   display: flex;
   flex-direction: column;
@@ -51,7 +50,6 @@ a {
   justify-content: center;
   text-align: center;
   min-height: 100px;
-  color: white;
 }
 
 .medium-blogpost-single-article h3 {
@@ -111,7 +109,7 @@ class MediumBlogpost extends HTMLElement {
 
     renderArticles(data=[]){
         data.forEach(data =>{
-            this._shadowRoot.querySelector('.medium-blogpost-articles').innerHTML +=`<a style="background: linear-gradient(to bottom,rgba(37, 37, 37, 0.349), rgba(27, 27, 27, 0.678)), url('${data.thumbnail}');background-size: contain;"class="medium-blogpost-single-article" href="${data.link}" target="_blank"><h3>${data.title}</h3><p>${this.parseDate(data.pubDate)}</p></a>`
+            this._shadowRoot.querySelector('.medium-blogpost-articles').innerHTML +=`<a style="background-size: contain;"class="medium-blogpost-single-article" href="${data.link}" target="_blank"><h3>${data.title}</h3><p>${this.parseDate(data.pubDate)}</p></a>`
         })
     }
     parseDate(date) {
