@@ -887,6 +887,10 @@ button {
   .work_data {
     width: 90%;
   }
+
+  .medium-blogpost-single-article {
+    min-height: 20vh;
+  }
 }
 
 /* For medium devices */
@@ -915,6 +919,10 @@ button {
     display: grid;
     grid-template-columns: 0.6fr;
     justify-content: center;
+  }
+
+  .medium-blogpost-single-article {
+    min-height: 20vh;
   }
 }
 
@@ -1049,6 +1057,9 @@ button {
   .footer_copy {
     margin-top: 4.5rem;
   }
+  .medium-blogpost-single-article {
+    min-height: 20vh;
+  }
 }
 
 /* For large devices */
@@ -1093,6 +1104,9 @@ button {
 
   .contact_inputs {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .medium-blogpost-single-article {
+    min-height: 20vh;
   }
 }
 
