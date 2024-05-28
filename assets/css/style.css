@@ -681,6 +681,71 @@ button {
   outline: none;
 }
 
+/* BOOKS */
+.gr_custom_container_1716872531 {
+  /* customize your Goodreads widget container here*/
+  border: 1px solid rgba(131, 131, 131, 0.2);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 10px 5px 10px 5px;
+  background-color: transparent;
+  width: 100%;
+  align-items: center;
+  height: 500px;
+  overflow-y: scroll;
+  font-family: var(--body-font);
+}
+
+.gr_custom_container_1716872531 a{
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.gr_custom_each_container_1716872531 {
+  /* customize each individual book container here */
+  width: 80%;
+  min-height: 200px;
+  font-size: var(--h3-font-size);
+  font-weight: bold;
+  clear: both;
+  margin-bottom: 10px;
+  overflow: auto;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(131, 131, 131, 0.2);
+}
+
+.gr_custom_book_container_1716872531 {
+  /* customize your book covers here */
+  overflow: hidden;
+  height: 100%;
+  float: left;
+  margin-right: 4px;
+}
+
+.gr_custom_book_container_1716872531 img {
+  /* customize your book covers here */
+  height: 90%;
+  margin-right: 20px;
+}
+
+.gr_custom_author_1716872531 {
+  /* customize your author names here */
+  font-size: var(--small-font-size);
+}
+
+.gr_custom_tags_1716872531 {
+  /* customize your tags here */
+  font-size: 10px;
+  color: var(--text-color);;
+}
+
+.gr_custom_rating_1716872531 {
+  /* customize your rating stars here */
+  float: var(--text-color);;
+}
+
 /* CONTACT ME  */
 .contact_container {
   row-gap: 3rem;
